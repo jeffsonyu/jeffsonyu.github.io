@@ -176,16 +176,13 @@
 											<a href="https://github.com/jeffsonyu/VTacO" class="icon brands fa-github"> Code</a>
 										</div>
 										<div class="col-9 col-12-medium">
-											Household environments are important testbeds for embodied AI research. Many simulation environments have been proposed to develop learning models for solving everyday household tasks. 
-											However, though interactions are paid attention to in most environments, the actions operating on the objects are not well supported concerning action types, object types, and interaction physics.
-											<br />
-											To bridge the gap at the action level, we propose a Unity3D-based action-centric environment, RFUniverse, 
-											for robot learning of everyday household tasks. It also provides a client-server communication framework based on gRPC, which can enable full functionality control of Unity with Python language. 
-											To demonstrate the usability of the simulation environment, we perform learning algorithms on various types of tasks, including manipulation, locomotion, multi-agent collaboration and task-and-motion-planning.
+											Tactile sensing is one of the modalities humans rely on heavily to perceive the world. Working with vision, this modality refines local geometry structure, 
+											measures deformation at the contact area, and indicates the hand-object contact state. In this project, we aim to leverage tactile information with visual feature, 
+											to reconstruct both rigid and deformable objects.
 											<ul>
-												<li>We construct a simulation environment RFUniverse, which can support physics-based interactions for all the extracted action and object types.</li>
-												<li>We benchmark 7 kinds of learning tasks on RFUniverse, which cover different aspects of the household tasks.</li>
-												<li>As a simulation system, this work has been heavily relied on by other works in our group: <b>RoboTube</b>, <b>RCareWorld</b> and <b>AKB-48</b>.</li>
+												<li>We construct a visual-tactile learning framework to reconstruct an object when it is being manipulated. We provide the object-only version VTacO, and the hand-object version VTacOH.</li>
+												<li>we propose a simulation environment, <b>VT-Sim</b>, which supports generating hand-object interaction for both rigid and deformable objects.</li>
+												<li>Our method outperforms the previous baselines quantitatively and qualitatively, and we also validate our method in the real world data.</li>
 											</ul>
 										</div>
 									</div>
@@ -199,13 +196,12 @@
 											<a href="https://github.com/jeffsonyu/T-NT" class="icon brands fa-github"> Code</a>
 										</div>
 										<div class="col-9 col-12-medium">
-											RoboTube video dataset contains 5,000 video demonstrations recorded with multi-view RGB-D
-											cameras of human-performing everyday household tasks including manipulation
-											of rigid objects, articulated objects, granular objects, deformable objects, and
-											bimanual manipulation. RT-sim, as the simulated twin environments, consists of
-											3D scanned, photo-realistic objects, minimizing the visual domain gap between the
-											physical world and the simulated environment.
-											<ul>
+											We propose a Tactile perception-based approach to address the Needle Threading task and name it T-NT. 
+											This task is divided into two main stages: Tail-end Finding and Tail-end Insertion. 
+											In the first stage, the agent traces the contour of the thread twice using vision-based tactile sensors mounted on the gripper fingers, to locate the tail-end of the thread. 
+											In the second stage, it employs a tactile-guided RL model to drive the robot to insert the thread into the target needle eyelet. 
+											Extensive experiments on real robots are conducted to demonstrate the efficacy of our method.
+<!-- 											<ul>
 												<li>We identify the issues in existing human videos for robot learning, and create a benchmark, RoboTube, which is designed by jointly considering 
 													the human video dataset and the evaluation platform.</li>
 												<li>RoboTube setups environments for 5 task families, namely drawer-closing, mug-pouring, cabinet-opening, bimanual-pot-lifting, and cloth-folding.
@@ -213,7 +209,7 @@
 												<li>To benchmark the baseline methods, we construct a simulated twin environment, RT-Sim, for the tasks and objects. It is developed upon RFUniverse 
 													with photo-realistic objects to minimize the visual domain gap.</li>
 												<li>We deploy the learned model on real robot experiments.</li>
-											</ul>
+											</ul> -->
 										</div>
 									</div>
 									<br />
